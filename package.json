@@ -1,0 +1,19 @@
+{
+  "name": "shape-to-path",
+  "version": "1.0.0",
+  "description": "convert an svg shape (line, rect, circle, ellipse) to a path / pathElement",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "svg",
+    "path",
+    "shape"
+  ],
+  "author": "Abd.Elbeltaji",
+  "license": "ISC"
+}

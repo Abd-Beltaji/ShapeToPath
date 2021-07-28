@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" defer>
+      import { shapeToPathElement } from '../index.js'
+
+      const shapesSVG = document.querySelector('svg')
+      const pathsSVG = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'svg'
+      )
+      pathsSVG.setAttribute('width', shapesSVG.getAttribute('width'))
+      pathsSVG.setAttribute('height', shapesSVG.getAttribute('height'))
+      pathsSVG.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+
+      shapesSVG
+        .querySelectorAll('rect, circle, ellipse, line')
+        .forEach(shapeElement => {
+          let pathElement = shapeToPathElement(shapeElement)
+          pathsSVG.appendChild(pathElement)
+        })
+
+      document.body.appendChild(pathsSVG)
+    </script>
+    <style>
+      svg {
+        border: solid #111 1px;
+      }
+      .blue-stroke{
+          stroke-width: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="250" cy="250" r="50" stroke="black" fill="red" />
+      <line x1="0" y1="250" x2="500" y2="250" stroke="black" />
+      <line x1="250" y1="0" x2="250" y2="500" stroke="black" />
+
+      <rect
+        x="10"
+        y="10"
+        width="100"
+        height="120"
+        fill="green"
+        stroke="blue"
+        class="blue-stroke"
+      />
+
+      <rect
+        x="210"
+        y="10"
+        width="100"
+        height="120"
+        fill="green"
+        stroke="blue"
+        class="blue-stroke"
+        rx="5"
+      />
+
+      <line x1="210" y1="0" x2="210" y2="500" stroke="#0099ff" />
+      <line x1="310" y1="0" x2="310" y2="500" stroke="#0099ff" />
+
+      <line x1="0" y1="10" x2="500" y2="10" stroke="#0099ff" />
+      <line x1="0" y1="130" x2="500" y2="130" stroke="#0099ff" />
+
+      <ellipse cx="90" cy="250" rx="50" ry="100" fill="#ff0055" />
+      <ellipse
+        cx="420"
+        cy="120"
+        rx="120"
+        ry="63"
+        fill="#8855ff"
+        stroke="#f50a86"
+        style="stroke-width: 5px"
+      />
+      <ellipse cx="250" cy="400" rx="100" ry="100" fill="#55ffaa" />
+    </svg>
+  </body>
+</html>

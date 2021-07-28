@@ -7,7 +7,7 @@
   
 ##Usage:
 ---
-###**shapeToPath**(*Element*): String
+### **shapeToPath**(*Element*): String
 
 Description:
 :  It is used to generate a String path from the given shape.`
@@ -21,7 +21,7 @@ let rectPath = shapeToPath(rect)
 console.log(rectPath)
 ```
 ---
-###**shapeToPathElement**(*Element*): SVGPathElement
+### **shapeToPathElement**(*Element*): SVGPathElement
 
 Description:
 :  It is used to generate an SVG path Element from the given shape that has the same attributes and has the new generated SVG path.`
@@ -36,7 +36,7 @@ console.log(rectPathElement)
 ```
 
 ---
-###**getPath**(*shape:String*, *attributes:Object* ): String
+### **getPath**(*shape:String*, *attributes:Object* ): String
 
 Description:
 :  It generates a path without needing to pass an element, it takes the shape type as a String and the required attributes and generates a path.`
