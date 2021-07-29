@@ -3,13 +3,13 @@
 - It transforms an svg shape element `(line, rect, circle, ellipse)` into a path or an SVG path element.
 
 ## How it works?
-- It uses `pre-defined path templates` (explained later) using the elements `attributes` to generate the appropreate path.
+- It uses `pre-defined path templates` using the elements `attributes` to generate the appropreate path.
   
-##Usage:
+## Usage:
 ---
 ### **shapeToPath**(*Element*): String
 
-Description:
+Description
 :  It is used to generate a String path from the given shape.`
 
 **Example**:
@@ -23,7 +23,7 @@ console.log(rectPath)
 ---
 ### **shapeToPathElement**(*Element*): SVGPathElement
 
-Description:
+Description
 :  It is used to generate an SVG path Element from the given shape that has the same attributes and has the new generated SVG path.`
 
 **Example**:
@@ -38,7 +38,7 @@ console.log(rectPathElement)
 ---
 ### **getPath**(*shape:String*, *attributes:Object* ): String
 
-Description:
+Description
 :  It generates a path without needing to pass an element, it takes the shape type as a String and the required attributes and generates a path.`
 
 **Example**:
