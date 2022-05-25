@@ -31,7 +31,7 @@ Description
 import { shapeToPathElement } from "ShapeToPath"
 
 const rectShapeElement = document.querySelector("rect")
-let rectPathElement = shapeToPath(rect)
+let rectPathElement = shapeToPathElement(rect)
 console.log(rectPathElement)
 ```
 
